@@ -2,9 +2,9 @@ package menjacnica.interfejs;
 
 public interface MenjacnicaInterfejs {
 
-	public void dodajKurs(double prodajni, double srednji, double kupovni);
+	public void dodajKurs(String naziv, String skracenica, double prodajni, double srednji, double kupovni);
 
-	public void obrisiKurs();
+	public void obrisiKurs(String skracenica);
 
-	public double pronadjiKurs();
+	public double pronadjiKurs(String skracenica);
 }
