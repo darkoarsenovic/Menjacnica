@@ -8,17 +8,20 @@ public class Menjacnica implements MenjacnicaInterfejs {
 
 	private LinkedList<Valuta> menjacnica = new LinkedList<Valuta>();
 
-
 	@Override
 	public void dodajKurs(String naziv, String skracenica, double prodajni, double srednji, double kupovni) {
-		Valuta v = new Valuta();
-		v.setNaziv(naziv);
-		v.setSkraceniNaziv(skracenica);
-		v.setProdajniKurs(prodajni);
-		v.setSrednjiKurs(srednji);
-		v.setKupovniKurs(kupovni);
+		try {
+			Valuta v = new Valuta();
+			v.setNaziv(naziv);
+			v.setSkraceniNaziv(skracenica);
+			v.setProdajniKurs(prodajni);
+			v.setSrednjiKurs(srednji);
+			v.setKupovniKurs(kupovni);
 
-		menjacnica.add(v);
+			menjacnica.add(v);
+		} catch (Exception e) {
+			e.getMessage();
+		}
 	}
 
 	@Override
